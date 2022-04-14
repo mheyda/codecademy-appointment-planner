@@ -15,7 +15,7 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     /*
-    Add contact info and clear data  
+    Add appointment info and clear data  
     */
     addAppointment(title, contact, date, time);
     setTitle('');

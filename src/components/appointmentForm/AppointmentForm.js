@@ -22,16 +22,14 @@ export const AppointmentForm = ({
 
   return (
     <form onSubmit={handleSubmit}>
-      {console.log('Today string: ' + getTodayString())}
-      {console.log('Selected date: ' + date)}
       <label for='contact'>Appointment For</label>
-      <ContactPicker contacts={contacts} value={contact} onChange={(e) => setContact(e.target.value)} />
+      <ContactPicker name='contact' contacts={contacts} value={contact} onChange={(e) => setContact(e.target.value)} />
       <label for='title'>Title</label>
       <input name='title' type='text' value={title} placeholder='Appointment Title' onChange={(e) => setTitle(e.target.value)} required />
       <label for='date'>Date</label>
       <input name='date' type='date' value={date} onChange={(e) => setDate(e.target.value)} min={getTodayString()} required />
       <label for='time'>Time</label>
-      <input name='time' type='time' value={time} onChange={(e) => setTime(e.target.value)} required />
+      <input name='time' type='time' value={time} min='08:00' max='17:00' onChange={(e) => setTime(e.target.value)} required />
       <input type='submit' />
     </form>
   );
