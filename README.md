@@ -1,1 +1,1 @@
-# appointment-planner
+# Codecademy Appointment Planner Challenge Project
